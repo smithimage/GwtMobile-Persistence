@@ -126,7 +126,7 @@ public class InstanceGenerator implements ClassGenerator {
 				new MethodGenerator() {			
 			@Override
 			public void generateMethod() {
-				utils.println("callback.onSuccess(entity.newInstance(result));");
+				utils.println("callback.onSuccess(result == null ? null : entity.newInstance(result));");
 			}
 		});
 		
